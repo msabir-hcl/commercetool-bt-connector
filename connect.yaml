@@ -132,7 +132,7 @@ deployAs:
     scripts:
       postDeploy: npm install && npm run build && npm run connector:post-deploy
     properties:
-      schedule: '*/2 * * * *'
+      schedule: '0 0 1 * *'
     configuration:
       standardConfiguration:
         - key: CTP_REGION
