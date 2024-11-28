@@ -4,7 +4,7 @@ import { logger } from './utils/logger.utils';
 
 const app = express();
 
-app.get('/job', async (req: Request, res: Response) => {
+app.post('/job', async (req: Request, res: Response) => {
   const event = req.body;
   logger.info('⚡️ New event received ⚡️', "New event Received");
 
