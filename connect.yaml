@@ -126,3 +126,43 @@ deployAs:
         - key: BRAINTREE_PRIVATE_KEY
           description: Braintree private key
           required: true
+  - name: job
+    applicationType: job
+    endpoint: /job
+    scripts:
+      postDeploy: npm install && npm run build && npm run connector:post-deploy
+    properties:
+      schedule: '*/2 * * * *'
+    configuration:
+      standardConfiguration:
+        - key: CTP_REGION
+          description: commercetools Composable Commerce API region
+          required: true
+        - key: BRAINTREE_MERCHANT_ID
+          description: Braintree Merchant Account
+          required: true
+        - key: BRAINTREE_PUBLIC_KEY
+          description: Braintree public key
+          required: true
+        - key: BRAINTREE_ENVIRONMENT
+          description: Braintree environment (Sandbox or Production)
+          required: true
+          default: Sandbox
+      securedConfiguration:
+        - key: CTP_PROJECT_KEY
+          description: commercetools Composable Commerce project key
+          required: true
+        - key: CTP_CLIENT_ID
+          description: commercetools Composable Commerce client ID
+          required: true
+        - key: CTP_CLIENT_SECRET
+          description: commercetools Composable Commerce client secret
+          required: true
+        - key: CTP_SCOPE
+          description: commercetools Composable Commerce client scope
+          required: true
+        - key: BRAINTREE_PRIVATE_KEY
+          description: Braintree private key
+          required: true
+  
+    
