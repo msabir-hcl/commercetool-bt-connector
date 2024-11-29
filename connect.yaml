@@ -126,9 +126,9 @@ deployAs:
         - key: BRAINTREE_PRIVATE_KEY
           description: Braintree private key
           required: true
-  - name: braintree-commercetools-jobs
+  - name: job
     applicationType: job
-    endpoint: /job
+    endpoint: /payment-status-updates/job
     scripts:
       postDeploy: npm install && npm run build && npm run connector:post-deploy
     properties:

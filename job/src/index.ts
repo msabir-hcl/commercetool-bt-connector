@@ -24,14 +24,14 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // Define routes
-app.use('/braintree-commercetools-jobs', JobRoutes);
+app.use('/payment-status-update/', JobRoutes);
 
 // Global error handler
 app.use(errorMiddleware);
 
 // Listen the application
 const server = app.listen(PORT, () => {
-  logger.info(`⚡️ Event application listening on port ${PORT}`);
+  logger.info(`⚡️ Job Event application listening on port ${PORT}`);
 });
 
 export default server;
