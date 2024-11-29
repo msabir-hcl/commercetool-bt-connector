@@ -5,6 +5,8 @@
     "resolveJsonModule": true,
     "outDir": "./build",
     "rootDir": "./src",
-    "inlineSourceMap": true
+    "inlineSourceMap": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true, // This is often enabled alongside esModuleInterop
   }
 }

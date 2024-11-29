@@ -126,13 +126,13 @@ deployAs:
         - key: BRAINTREE_PRIVATE_KEY
           description: Braintree private key
           required: true
-  - name: job
+  - name: braintree-commercetools-jobs
     applicationType: job
     endpoint: /job
     scripts:
       postDeploy: npm install && npm run build && npm run connector:post-deploy
     properties:
-      schedule: '0 0 1 * *'
+      schedule: '0 * * * *'
     configuration:
       standardConfiguration:
         - key: CTP_REGION
