@@ -128,7 +128,7 @@ deployAs:
           required: true
   - name: job
     applicationType: job
-    endpoint: /payment-status-updates/job
+    endpoint: /payment-status-update/job
     scripts:
       postDeploy: npm install && npm run build && npm run connector:post-deploy
     properties:
