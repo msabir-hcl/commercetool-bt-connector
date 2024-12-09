@@ -31,8 +31,7 @@ export const getPaymentWithSettlingStatus =  async (): Promise<PaymentPagedQuery
       .payments()
       .get({
         queryArgs: {
-          where: `paymentStatus(interfaceCode="submitted_for_settlement")`,
-          limit:1
+          where: `paymentStatus(interfaceCode="submitted_for_settlement" or intefaceCode="settling")`
         },
       })
       .execute()
